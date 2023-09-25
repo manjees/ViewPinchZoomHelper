@@ -10,6 +10,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.ImageView
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
@@ -593,6 +594,20 @@ class ZoomHelper {
          */
         fun skipLayout(view: View, skip: Boolean) =
             view.setTag(R.id.skip_zoom_layout, if (skip) Object() else null)
+
+        fun setBasicSetting(view: ImageView) {
+            addZoomableView(view)
+            getInstance().apply {
+                minScale = 1f
+                maxScale = Float.MAX_VALUE
+                shadowColor = Color.BLACK
+                maxShadowAlpha = 0.6f
+                shadowAlphaFactory = 4f
+                dismissDuration = 200
+                layoutTheme = android.R.style.Theme_Translucent_NoTitleBar_Fullscreen
+                isEnabled = true
+            }
+        }
     }
 
 }

@@ -9,7 +9,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        minSdk 28
+        minSdk 24
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -51,7 +51,7 @@ afterEvaluate {
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.github.manjee-official'
                 artifactId = 'ViewPinchZoomHelper'
-                version = '0.0.4'
+                version = '0.0.7'
             }
             // Creates a Maven publication called “debug”.
             debug(MavenPublication) {
@@ -60,7 +60,7 @@ afterEvaluate {
 
                 groupId = 'com.github.manjee-official'
                 artifactId = 'ViewPinchZoomHelper'
-                version = '0.0.4'
+                version = '0.0.7'
             }
         }
     }
